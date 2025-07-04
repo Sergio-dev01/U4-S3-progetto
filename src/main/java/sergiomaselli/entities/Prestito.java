@@ -66,9 +66,6 @@ public class Prestito {
 
     public void setDataInizioPrestito(LocalDate dataInizioPrestito) {
         this.dataInizioPrestito = dataInizioPrestito;
-        if (dataInizioPrestito != null) {
-            this.dataRestituzionePrevista = dataInizioPrestito.plusDays(30);
-        }
     }
 
     public LocalDate getDataRestituzionePrevista() {
