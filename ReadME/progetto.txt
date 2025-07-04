@@ -1,0 +1,25 @@
+				STRATEGIA UTILIZZATA "JOINED"
+
+
+Entità					Chiave Primaria					Relazioni
+Utente					 numeroTessera				1:N con Prestito (FK: utente_id) Un utente può avere più prestiti
+Catalogo				      isbn				1:N con Prestito (FK: elemento_prestato) libri e riviste possono essere presi in prestito da N. prestiti
+Prestito				       id				FK verso Utente e Catalogo (isbn e numero_tessera) Un prestito è legato da un solo Utente e da un solo articolo
+Libro/Rivista				      isbn				PK + FK su Catalogo.isbn (JOINED inheritance) 
+
+
+				       DAO IMPLEMENTATI:
+-UTENTE
+-CATALOGO
+-PRESTITO
+
+
+					      ENUM:
+-Periodicita
+
+
+
+
+					   EXCEPTIONS:
+-NotFoundException
+

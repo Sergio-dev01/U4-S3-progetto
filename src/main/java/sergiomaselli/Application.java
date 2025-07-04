@@ -55,6 +55,15 @@ public class Application {
 //
 //            Rivista rivista4 = new Rivista(3242424, "mintes", 2021, 40, Periodicita.SEMESTRALE);
 //            cd.save(rivista4);
+//
+//            Libro libro5 = new Libro(888564, "libroEco", 2003, 130, "Frank Gallagher", "romanzo");
+//            cd.save(libro5);
+//
+//            Rivista rivista6 = new Rivista(9094, "luna", 2091, 40, Periodicita.MENSILE);
+//            cd.save(rivista6);
+
+//            Libro libroConEco = new Libro(999999, "Titolo di prova", 2020, 100, "Umberto Eco", "saggio");
+//            cd.save(libroConEco);
 
 //            usato per inserire la data del girono corrente
 //            LocalDate oggi = LocalDate.now();
@@ -91,6 +100,38 @@ public class Application {
 //            prestitoRivista.setDataRestituzionePrevista(oggi.plusDays(30));
 //            prestitoRivista.setDataRestituzioneEffettiva(null);
 //            pd.save(prestitoRivista);
+
+            //********************METODI****************
+
+
+            System.out.println("------------------------METODI------------------");
+
+            //rimuovi un elemento tramite isbn
+//            cd.deleteByIsbn(123122);
+//
+//            // Cerca elemento con isbn 2345
+//            Catalogo c = cd.findByIsbn(2345);
+//            if (c != null) {
+//                System.out.println("Trovato elemento con ISBN 2345: " + c);
+//            } else {
+//                System.out.println("Elemento con ISBN 2222 non trovato.");
+//            }
+//
+//            // Cerca elementi pubblicati nel 2023
+//            List<Catalogo> elementi2020 = cd.findByAnnoPubblicazione(2023);
+//            System.out.println("Elementi pubblicati nel 2023:");
+//            elementi2020.forEach(System.out::println);
+//
+//            // Cerca libri di autore contenente "Eco"
+//            List<Libro> libriEco = cd.findByAutore("eco");
+//            System.out.println("Libri di autori contenenti 'eco': ");
+//            libriEco.forEach(System.out::println);
+
+            //Ricerca risultato contenente titolo
+//            List<Catalogo> risultatiTitolo = cd.findByTitolo("magazine");
+//            System.out.println("Elementi con titolo contenente 'magazine':");
+//            risultatiTitolo.forEach(System.out::println);
+
 
         } catch (NotFoundException ex) {
             System.out.println(ex.getMessage());
