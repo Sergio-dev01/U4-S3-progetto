@@ -1,7 +1,10 @@
 package sergiomaselli.entities;
 
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "tipo_elemento")
 public abstract class Catalogo {
 
     @Id
