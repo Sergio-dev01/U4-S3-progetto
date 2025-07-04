@@ -34,4 +34,12 @@ public class Libro extends Catalogo {
     public void setGenere(String genere) {
         this.genere = genere;
     }
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "autore='" + autore + '\'' +
+                ", genere='" + genere + '\'' +
+                '}';
+    }
 }
