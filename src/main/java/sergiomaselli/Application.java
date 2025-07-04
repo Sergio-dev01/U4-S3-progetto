@@ -132,6 +132,14 @@ public class Application {
 //            System.out.println("Elementi con titolo contenente 'magazine':");
 //            risultatiTitolo.forEach(System.out::println);
 
+            //Ricerca prestiti ancora in corso dato numero_tessera
+//            int numeroTessera = 1234;
+//
+//            List<Prestito> prestitiAttivi = pd.findPrestitiInCorsoByUtente(numeroTessera);
+//
+//            System.out.println("Prestiti attivi per l'utente con tessera " + numeroTessera + ":");
+//            prestitiAttivi.forEach(System.out::println);
+
 
         } catch (NotFoundException ex) {
             System.out.println(ex.getMessage());

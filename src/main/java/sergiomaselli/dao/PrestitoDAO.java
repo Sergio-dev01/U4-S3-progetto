@@ -4,6 +4,8 @@ import sergiomaselli.entities.Prestito;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
+import java.util.List;
 
 public class PrestitoDAO {
     private final EntityManager entityManager;
@@ -38,4 +40,13 @@ public class PrestitoDAO {
         if (p == null) throw new RuntimeException("Prestito con ID " + id + " non trovato.");
         return p;
     }
+
+    public List<Prestito> findPrestitiInCorsoByUtente(int numeroTessera) {
+        TypedQuery<Prestito> query = entityManager.createQuery(
+                "SELECT p FROM Prestito p WHERE p.utente.numeroTessera = :numTessera AND p.dataRestituzioneEffettiva IS NULL",
+                Prestito.class);
+        query.setParameter("numTessera", numeroTessera);
+        return query.getResultList();
+    }
+
 }
